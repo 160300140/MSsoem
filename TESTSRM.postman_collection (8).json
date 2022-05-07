@@ -1,0 +1,1247 @@
+{
+	"info": {
+		"_postman_id": "d0438f15-4c76-4478-9487-e688b0778541",
+		"name": "TESTSRM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MSUserSRM",
+			"item": [
+				{
+					"name": "Activar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\": \"sesionId\",\r\n    \"mail\":\"erik.reynosolara@gmail.com\",\r\n    \"code\":\"413693\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/ActivateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"ActivateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResendCode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\": \"SES25190322233141\",\r\n    \"mail\": \"erik.reynosolara@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/ResendCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"ResendCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\":\"\",\r\n    \"mail\": \"erik.reynosolara@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/GetUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"GetUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\": \"120320\",\r\n    \"user\" : {\r\n        \"id\": 1,\r\n        \"profile\": \"AD\",\r\n        \"name\": \"Juanito\",\r\n        \"lastName\": \"Perez\",\r\n        \"surName\": \"Perez\",\r\n        \"position\": \"Admin\",\r\n        \"status\": \"AC\"\r\n    }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/UpdateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"UpdateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/DeleteUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"DeleteUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mail\": \"erik.reynosolara@gmail.com\",\r\n    \"password\": \"admin1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/LoginUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"LoginUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"profile\": \"AD\",\r\n      \"name\": \"Erik\",\r\n      \"lastName\": \"Reynoso\",\r\n      \"surName\": \"Lara\",\r\n      \"mail\": \"erik.reynosolara@gmail.com\",\r\n      \"position\": \"ADMIN\",\r\n      \"password\": \"admin\",\r\n      \"confirmPassword\": \"admin\",\r\n      \"status\": \"AC\",\r\n      \"sesionId\": \"01\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/CreateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"CreateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar contraseña",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\": \"01\",\r\n    \"mail\": \"erik.reynosolara@gmail.com\",\r\n    \"password\": \"admin1\",\r\n    \"confirmPassword\": \"admin1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/UpdatePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"UpdatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dentilux\",\r\n\t\"phoneNumber\": \"9984109027\",\r\n\t\"mail\": \"dentilux@gmail.com\",\r\n\t\"typeRegistre\":\"1\",\t\r\n\t\"businessName\": \"DENTILUX CA\",\r\n\t\"companyRegistry\": \"DENTILUX\",\r\n    \"description\": \"Clinica dental\",\r\n    \"sesionId\": \"SES31210422234308\",\r\n\t\"address\": {\r\n        \"calle\": \"Dentilux\",\r\n        \"postalCode\": \"77506\",\r\n        \"latitude\": \"7878878\",\r\n        \"longitude\": \"-4544646\",\r\n        \"phoneNumber\": \"9984109027\",\r\n        \"region\": \"259\",\r\n        \"city\": \"Cancún\",\r\n        \"description\":\"Dirección dentilux\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/CreateCompany",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"CreateCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAddress1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\": \"SES31210422234308\",\r\n    \"mail\": \"erik.reynosolara@gmail.com\",\r\n    \"calle\": \"Mi direccion2\",\r\n    \"postalCode\": \"77509\",\r\n    \"latitude\": \"-455622\",\r\n    \"longitude\": \"87874551\",\r\n    \"phoneNumber\": \"9983226937\",\r\n    \"region\": \"48\",\r\n    \"city\": \"Cancún\",\r\n    \"description\": \"Calle etc. \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/CreateAddress",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"CreateAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompanyList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\":\"SES31210422234308\",\r\n    \"mail\": \"erik.reynosolara@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/GetCompanyList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"GetCompanyList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AssignCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\": \"SES31210422234308\",\r\n    \"mail\":  \"erik.reynosolara@gmail.com\",\r\n    \"companyId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/SRM/User/AssignCompany",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"SRM",
+								"User",
+								"AssignCompany"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSMailSRM",
+			"item": [
+				{
+					"name": "SendMail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\":\"ookinsoft@gmail.com\",\r\n\t\"to\": \"170100010@ucaribe.edu.mx\",\r\n\t\"subject\": \"Erik Reynoso Lara\",\r\n\t\"body\":\"Mensaje de prueba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/SRM/Mail/SendMail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"SRM",
+								"Mail",
+								"SendMail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSLogSRM",
+			"item": [
+				{
+					"name": "CreateErrorLog",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiMTIzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTY0MTg4NDkzNCwiZXhwIjoxNjQxODg1NTM0fQ.FrXZGDZTgXSVafH0z5XOcqDKcO0iYkAw3oHgQWL4dHpOXRGn73rnWCFPY3ivXVKl4rdtWCi_2avZe_y8tz8qAQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiMTIzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTY0MTg4NDEwMSwiZXhwIjoxNjQxODg0NzAxfQ.94OnASwKw6mIxr9gKbS-Y-oWI6xw9H31WLjIZoHD6TmNxzJ6oU_bZBcA2bMQG45a52aJi4HSAfVcWBClUcStMA",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"Test01\",\r\n    \"json\":\"{'TEST':'JJBXCJBJXBZJBJZXBCJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJXBCHJBFBJCCJSBCJBCJXBJCBJXCBJHXBCHJDBHJJJSBCJXBCJXBCJBXJCBXJCBXHJCXBCHJBXJCBJXBCJHXBCJHBXCJBXCJHBDJBJDBCJXBCJXBCJBXJCBJXBCHXBJCXBCHJ'}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9003/Log/CreateErrorLog",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9003",
+							"path": [
+								"Log",
+								"CreateErrorLog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateSuccessLog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"Test01\",\r\n    \"json\":\"{'TEST':'JJBXCJBJXBZJBJZXBCJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJXBCHJBFBJCCJSBCJBCJXBJCBJXCBJHXBCHJDBHJJJSBCJXBCJXBCJBXJCBXJCBXHJCXBCHJBXJCBJXBCJHXBCJHBXCJBXCJHBDJBJDBCJXBCJXBCJBXJCBJXBCHXBJCXBCHJ'}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Log/CreateSuccessLog",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Log",
+								"CreateSuccessLog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateInformationLog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiMTIzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTY0MTg4NDkzNCwiZXhwIjoxNjQxODg1NTM0fQ.FrXZGDZTgXSVafH0z5XOcqDKcO0iYkAw3oHgQWL4dHpOXRGn73rnWCFPY3ivXVKl4rdtWCi_2avZe_y8tz8qAQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"Test01\",\r\n    \"json\":\"{'TEST':'JJBXCJBJXBZJBJZXBCJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJXBCHJBFBJCCJSBCJBCJXBJCBJXCBJHXBCHJDBHJJJSBCJXBCJXBCJBXJCBXJCBXHJCXBCHJBXJCBJXBCJHXBCJHBXCJBXCJHBDJBJDBCJXBCJXBCJBXJCBJXBCHXBJCXBCHJ'}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Log/CreateInformationLog",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Log",
+								"CreateInformationLog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9003/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9003",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSCustomerSRM",
+			"item": [
+				{
+					"name": "CreateCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\" : \"SES25270322201717\",\r\n    \"name\": \"Erik\", \r\n    \"lastName\": \"Reynoso\",\r\n    \"surName\":  \"Lara\",\r\n    \"type\":  \"Frecuente\",\r\n    \"dateBirth\": \"1990-01-05\", \r\n    \"gender\": \"M\",\r\n    \"rfc\": \"RELE961002RX0\",\r\n    \"businessName\" : \"OOKINGSOFT CV.SV\",\r\n    \"profession\":\"ING.SOFTWARE\",\r\n    \"phoneNumber\": \"9983226937\", \r\n    \"mail\": \"erik.reynoso@gmail.com\",\r\n    \"description\": \"Este es un cliente frecuente.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/Customer/CreateCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"Customer",
+								"CreateCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"customerId\": 0,\r\n\t\"customerNumber\": \"\",\r\n\t\"name\": \"Erik\",\r\n\t\"lastName\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/Customer/GetCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"Customer",
+								"GetCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomerList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"customerId\": 0,\r\n\t\"customerNumber\": \"\",\r\n\t\"name\": \"\",\r\n\t\"lastName\": \"\",\r\n    \"status\": \"AC\",\r\n    \"pagination\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/Customer/GetCustomerList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"Customer",
+								"GetCustomerList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"sesionId\": \"\",\r\n\t\"customerNumber\": \"A735994735992OKS\",\r\n\t\"name\":\"\",\r\n\t\"lastName\":\"\",\r\n\t\"surName\":\"\",\r\n\t\"type\":\"DEUDOR\",\r\n\t\"status\":\"\",\r\n\t\"dateBirth\": \"\",\r\n\t\"gender\":\"\",\r\n\t\"rfc\":\"\",\r\n\t\"businessName\":\"\",\r\n\t\"profession\":\"\",\r\n\t\"phoneNumber\":\"\",\r\n\t\"mail\":\"\",\r\n\t\"description\":\"Test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/Customer/UpdateCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"Customer",
+								"UpdateCustomer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSStoreSRM",
+			"item": [
+				{
+					"name": "CreateStore",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\" : \"SES25270322201717\",\r\n    \"name\": \"Dentilux\",\r\n    \"phoneNumber\": \"9983225566\",\r\n\t\"mail\": \"Dentilux@gmail.com\",\r\n    \"openingTime\": \"09:00:00\",\r\n\t\"closingTime\": \"18:00:00\",\r\n\t\"rfc\": \"DENREFERENCIA\",\r\n\t\"description\": \"Primer sucursal\",\r\n    \"address\": {\r\n        \"calle\": \"calle 1\",\r\n\t    \"PostalCode\": \"77500\",\r\n\t    \"latitude\": \"1151515\",\r\n\t    \"longitude\": \"-4665\",\r\n\t    \"phoneNumber\": \"98665\",\r\n        \"region\": \"250\",\r\n\t    \"city\": \"Cancún\",\r\n        \"description\" : \"Descripcion Test\"\r\n    } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9006/Store/CreateStore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"Store",
+								"CreateStore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStoreList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"storeId\" : 6,\r\n    \"name\": \"\",\r\n    \"storeNumber\": \"\",\r\n    \"status\": \"AC\",\r\n    \"city\": \"\",\r\n    \"dateType\": \"\",\r\n    \"startDate\": \"\",\r\n    \"finalDate\": \"\",\r\n    \"pagination\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9006/Store/GetStoreList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"Store",
+								"GetStoreList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStore",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\": \"\",\r\n    \"storeNumber\": \"A320609320609SUC\",\r\n    \"name\": \"\",\r\n    \"status\": \"\",\r\n    \"phoneNumber\": \"\", \r\n    \"mail\": \"\",\r\n    \"openingTime\": \"09:20:22\",\r\n    \"closingTime\": \"09:00:11\",\r\n    \"rfc\": \"RELE96100RX0\",\r\n    \"description\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9006/Store/UpdateStore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"Store",
+								"UpdateStore"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSEmployeeSRM",
+			"item": [
+				{
+					"name": "CreateEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"sesionId\": \"SES24150122150426\",\r\n\"fullName\": \"Shandy Arely Salazar Chan\",\r\n\"gender\": \"F\",\r\n\"marital\": \"Soltera\",\r\n\"rfc\": \"RASC9856232\",\r\n\"nss\": \"0101010101\",\r\n\"businessName\": \"SOEM\",\r\n\"birthday\": \"1990-01-05\",\r\n\"certificate\": \"101010\",\r\n\"emergencyContact\": \"9981498111\",\r\n\"emergencyPhone\": \"9983226937\",\r\n\"barcode\": null,\r\n\"jobTitle\": \"CEO SOEM\",\r\n\"workPhone\": null,\r\n\"mobilePhone\": null,\r\n\"workEmail\": \"OokinSoft@gmail.com\",\r\n\"workLocation\": \"000122112,-0221212\",\r\n\"lastCheckIn\": \"09:00:00\",\r\n\"lastCheckOut\": \"18:00:00\",\r\n\"description\": \"CEO del departamento de software.\",\r\n\"bankAccountId;\": 0,\r\n\"jobId\": 0,\r\n\"parentId\": 0,\r\n\"employeeRelativesId\": 0,\r\n\"resourceCalendarId\": 0,\r\n\"resourceId\": 0,\r\n\"lastAttendanceId\": 0,\r\n\"leaveManagerId\": 0,\r\n\"departmentId\": 0,\r\n\"storeId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9007/Employee/CreateEmployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9007",
+							"path": [
+								"Employee",
+								"CreateEmployee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEmployeeList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": 7,\r\n    \"name\": \"\",\r\n    \"employeeNumber\": \"\",\r\n    \"status\": \"\",\r\n    \"city\": \"\",\r\n    \"dateType\": \"\",\r\n    \"startDate\": \"\",\r\n    \"finalDate\": \"\",\r\n    \"storeId\": 0,\r\n    \"pagination\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9007/Employee/GetEmployeeList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9007",
+							"path": [
+								"Employee",
+								"GetEmployeeList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSProductSRM",
+			"item": [
+				{
+					"name": "CreateProduct",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"sesionId\":\"SES25270322201717\",\r\n\t\"name\":\"Cirugia Molar\",\r\n\t\"price\": 2000,\r\n\t\"model\":\"NA\",\r\n\t\"stock\": 1,\r\n\t\"type\":\"SERVICIO\",\r\n\t\"QRCode\":\"null\",\r\n\t\"discountPercent\":5,\r\n\t\"expiryDate\":\"2023-01-05\",\r\n\t\"storeId\":5,\r\n\t\"providerId\":3,\r\n\t\"description\":\"Servicio cirugia molar\",\r\n    \"image\":{\r\n\t    \"id\":0,\r\n\t    \"name\":\"cirugia\", \r\n\t    \"url\":\"Img/cirugia.jpg\", \r\n\t    \"imageType\":\"jpg\", \r\n        \"description\":\"imagen de cirugia molar\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9008/Product/CreateProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9008",
+							"path": [
+								"Product",
+								"CreateProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\":\"\",\r\n    \"productId\":10,\r\n    \"key\":\"\",\r\n    \"name\": \"\",\r\n    \"model\": \"\",\r\n    \"status\": \"AC\",\r\n    \"dateType\":\"\",\r\n    \"startDate\": \"\",\r\n    \"finalDate\":\"\",\r\n    \"pagination\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9008/Product/GetProductList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9008",
+							"path": [
+								"Product",
+								"GetProductList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetQueryList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"queryId\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9008/Product/GetQueryList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9008",
+							"path": [
+								"Product",
+								"GetQueryList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"sesionId\":\"\",\r\n    \"key\":\"AAA963674963671PRO\",\r\n    \"name\": \"\",\r\n    \"price\":\"\",\r\n    \"model\": \"\",\r\n    \"stock\": \"\",\r\n    \"type\": \"\",\r\n    \"status\": \"\",\r\n    \"qrcode\": \"\",\r\n    \"discountPercent\": \"\",\r\n    \"expiryDate\": \"\", \r\n    \"description\": \"Test update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9008/Product/UpdateProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9008",
+							"path": [
+								"Product",
+								"UpdateProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSSaleSRM",
+			"item": [
+				{
+					"name": "CalculateTotalAmount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\" : \"SES25270322201717\",\r\n    \"coupon\":0,\r\n    \"productList\": [ \r\n        { \r\n            \"id\": 7, \r\n            \"quantity\": 2, \r\n            \"unitDiscount\": 0\r\n            \r\n         }, \r\n         { \r\n             \"id\": 8, \r\n             \"quantity\": 1, \r\n             \"unitDiscount\": 0\r\n         }, \r\n         { \r\n             \"id\": 9, \r\n             \"quantity\": 1, \r\n             \"unitDiscount\": 0\r\n         }\r\n             \r\n     ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9009/Quotation/CalculateTotalAmount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9009",
+							"path": [
+								"Quotation",
+								"CalculateTotalAmount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateQuotation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\": \"SES25270322201717\",\r\n    \"currencyId\": 2,\r\n    \"description\": \"Cotización\",\r\n    \"customerId\":12,\r\n    \"storeId\": 5,\r\n    \"productList\":[\r\n        {\r\n            \"id\": 7,\r\n            \"quantity\": 2,\r\n            \"totalAmount\": 91.0,\r\n            \"discountTotal\": 91.0\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"quantity\": 1,\r\n            \"totalAmount\": 400.0,\r\n            \"discountTotal\": 400.0\r\n        },\r\n        {\r\n            \"id\": 9,\r\n            \"quantity\": 1,\r\n            \"totalAmount\": 2000.0,\r\n            \"discountTotal\": 1900.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9009/Quotation/CreateQuotation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9009",
+							"path": [
+								"Quotation",
+								"CreateQuotation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetQuotationList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quotationId\": 0,\r\n    \"key\": \"\",\r\n    \"status\": \"AC\",\r\n    \"dateType\": \"\",\r\n    \"startDate\": \"\",\r\n    \"finalDate\": \"\",\r\n    \"pagination\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9009/Quotation/GetQuotationList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9009",
+							"path": [
+								"Quotation",
+								"GetQuotationList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateSale",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\": \"SES25270322201717\",\r\n    \"currencyId\": 2,\r\n    \"description\": \"Test de venta\",\r\n    \"customerId\": 12,\r\n    \"storeId\": 5,\r\n    \"productList\":[\r\n        {\r\n            \"id\": 7,\r\n            \"quantity\": 2,\r\n            \"totalAmount\": 91.0,\r\n            \"discountTotal\": 91.0\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"quantity\": 1,\r\n            \"totalAmount\": 400.0,\r\n            \"discountTotal\": 400.0\r\n        },\r\n        {\r\n            \"id\": 9,\r\n            \"quantity\": 1,\r\n            \"totalAmount\": 2000.0,\r\n            \"discountTotal\": 1900.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9009/Sale/CreateSale",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9009",
+							"path": [
+								"Sale",
+								"CreateSale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSaleList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"saleId\": 0,\r\n    \"key\": \"\",\r\n    \"status\": \"AC\",\r\n    \"dateType\": \"\",\r\n    \"startDate\": \"\",\r\n    \"finalDate\": \"\",\r\n    \"pagination\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9009/Sale/GetSaleList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9009",
+							"path": [
+								"Sale",
+								"GetSaleList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSProviderSRM",
+			"item": [
+				{
+					"name": "CreateProvider",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\":\"SES25270322201717\",\r\n    \"name\":\"Proveedor Colgate\",\r\n\t\"phoneNumber\":\"9983226937\",\r\n\t\"type\":\"PRO\",\r\n    \"rfc\":\"REGE450565\",\r\n    \"category\":\"Productos\",\r\n    \"description\":\"Proveedor de pasta dental\",\r\n    \"businessName\":\"Colgate CV\",\r\n    \"address\": {\r\n        \"calle\": \"Empresa colgate\",\r\n\t    \"PostalCode\": \"77500\",\r\n\t    \"latitude\": \"1151515\",\r\n\t    \"longitude\": \"-4665\",\r\n\t    \"phoneNumber\": \"9866565390\",\r\n        \"region\": \"250\",\r\n\t    \"city\": \"Cancún\",\r\n        \"description\" : \"Descripcion Test\"\r\n    } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9011/Provider/CreateProvider",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9011",
+							"path": [
+								"Provider",
+								"CreateProvider"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProviderList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"providerId\":4,\r\n    \"name\":\"\",\r\n    \"status\":\"AC\",\r\n    \"dateType\":\"\",\r\n    \"startDate\":\"\",\r\n    \"finalDate\":\"\",\r\n    \"pagination\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9011/Provider/GetProviderList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9011",
+							"path": [
+								"Provider",
+								"GetProviderList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSPaymentSRM",
+			"item": [
+				{
+					"name": "CreatePayment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sesionId\": \"SES25270322201717\",\r\n    \"saleId\": 5,\r\n    \"paymentType\": 3,\r\n    \"storeId\": 5,\r\n    \"transactionId\": 0,\r\n    \"currencyId\": 2,\r\n    \"paymentAmount\": 2391.0,\r\n    \"description\": \"Pago de total de venta\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9010/Payment/CreatePayment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"Payment",
+								"CreatePayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPaymentListBySaleId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sessionId\":\"SES25270322201717\",\r\n\t\"saleId\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9010/Payment/GetPaymentListBySaleId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"Payment",
+								"GetPaymentListBySaleId"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
